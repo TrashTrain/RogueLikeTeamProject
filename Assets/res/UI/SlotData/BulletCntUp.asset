@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8730ced369759458c96775feb02c66, type: 3}
+  m_Name: BulletCntUp
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: fd9463daf3b895c4db3144a250030168, type: 3}
+  itemName: "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
+  value: 1
+  font: {fileID: 11400000, guid: 02e18ec6ea39540f79a7ed0175e25540, type: 2}
+  itemDescription: "\uCD1D\uC54C\uC774 \uBC1C\uC0AC\uB418\uB294 \uAC1C\uC218\uAC00
+    1\uAC1C \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  type: 1
+  status: 0
+  passive: 1

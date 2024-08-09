@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8730ced369759458c96775feb02c66, type: 3}
+  m_Name: RazorChange
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 4b7ea3c75a6c6c6429803ea42a898cff, type: 3}
+  itemName: "\uB808\uC774\uC800 \uBCC0\uD615"
+  value: 0
+  font: {fileID: 11400000, guid: 02e18ec6ea39540f79a7ed0175e25540, type: 2}
+  itemDescription: "\uB808\uC774\uC800\uAC00 \uC55E\uC73C\uB85C \uC0C1\uC2DC \uBC1C\uC0AC\uC0C1\uD0DC\uAC00
+    \uB429\uB2C8\uB2E4.\n\uB2E8, \uB370\uBBF8\uC9C0\uAC00 1/10\uC774 \uB429\uB2C8\uB2E4."
+  type: 1
+  status: 0
+  passive: 0

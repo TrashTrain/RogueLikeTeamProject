@@ -9,6 +9,8 @@ public class AudioNode : MonoBehaviour
     public void Play(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+
+        StartCoroutine("WaitSound");
     }
 
     private IEnumerator WaitSound()
@@ -16,5 +18,10 @@ public class AudioNode : MonoBehaviour
         yield return new WaitWhile(() => audioSource.isPlaying);
 
         SoundManager.instance.SetNode(this);
+    }
+
+    public void SetVolumn(float percent)
+    {
+        audioSource.volume = percent;
     }
 }

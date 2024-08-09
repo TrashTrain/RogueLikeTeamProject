@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public abstract class Item : MonoBehaviour
 {
-    public PlayerController player;
+    // protected PlayerController player;
     public ItemGetText itemGetText;
     
     protected abstract void OnTriggerEnter2D(Collider2D other);

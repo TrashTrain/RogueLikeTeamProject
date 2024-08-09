@@ -6,30 +6,17 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject LoadCanvas;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnClickNewGame()
     {
-        SceneManager.LoadScene("Tutorial Map");
+        //SceneManager.LoadScene("Tutorial Map");
+        SceneLoader.LoadScene("Opening Scene");
+        DataManager.instance.InitPlayTime();
     }
 
-    public void OnClickLoad()
-    {
-        if (LoadCanvas != null)
-        {
-            LoadCanvas.SetActive(true);
-        }
-    }
 
+    
     public void OnClickExit()
     {
 #if UNITY_EDITOR

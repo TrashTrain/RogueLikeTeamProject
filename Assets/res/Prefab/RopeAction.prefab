@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 5265033563216062350}
   - component: {fileID: 2023134945126191284}
   - component: {fileID: 4070532409301832702}
+  - component: {fileID: 6398093978756098735}
   m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
@@ -64,8 +65,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5024229328681149955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fa870e49ca865e4992b90ac78a12476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -147,7 +148,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 7
+  m_Constraints: 3
 --- !u!58 &5265033563216062350
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -216,6 +217,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wireAction: {fileID: 2837764100808350679}
+  enemyTrans: {fileID: 0}
+  isBindToEnemy: 0
+  maxHoldLength: 4
+  isLerping: 0
+  lerpDuration: 0.4
+--- !u!114 &6398093978756098735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051035852087627047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &6864023627771755251
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,14 +285,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hookAction: {fileID: 4070532409301832702}
   playerPos: {fileID: 0}
+  player: {fileID: 0}
   hook: {fileID: 570988727419286136}
   wire: {fileID: 3013668314952671488}
   mouseDir: {x: 0, y: 0}
-  launchSpeed: 30
+  launchSpeed: 50
   wireMaxLength: 10
   shrinkSpeed: 10
+  lastJumpSpeed: 10
   isWireMax: 0
   isAttached: 0
+  maxHoldTime: 4
+  currentHoldTime: 0
+  hookKey: 113
 --- !u!1 &7911581965565710598
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8448105712064092465}
   - component: {fileID: 3013668314952671488}
+  - component: {fileID: 310047702877035557}
   m_Layer: 0
   m_Name: Wire
   m_TagString: Untagged
@@ -324,7 +352,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -407,3 +435,19 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &310047702877035557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911581965565710598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
